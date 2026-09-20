@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>Dino Adventure</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="gameWrap">
+    <canvas id="game" width="960" height="540"></canvas>
+
+    <div class="overlay" id="startScreen">
+      <h1>🦖 DINO ADVENTURE</h1>
+      <p>
+        Help the little dino collect coins and reach the flag!<br />
+        Watch out for slimes and spikes.<br /><br />
+        Move: <span class="key">←</span> <span class="key">→</span> &nbsp;
+        Jump: <span class="key">SPACE</span> / <span class="key">↑</span><br />
+        Mobile: on-screen buttons
+      </p>
+      <button class="btn" id="startBtn">Start Game</button>
+    </div>
+
+    <div class="overlay hidden" id="winScreen">
+      <h1>🎉 YOU WIN!</h1>
+      <h2 id="winScore">Score: 0</h2>
+      <p>You collected all the coins and reached the goal!</p>
+      <button class="btn" id="nextLevelBtn">Next Level →</button>
+    </div>
+
+    <div class="overlay hidden" id="loseScreen">
+      <h1>💀 GAME OVER</h1>
+      <h2 id="loseScore">Score: 0</h2>
+      <p>Don't give up — try again!</p>
+      <button class="btn" id="retryBtn">Retry</button>
+    </div>
+
+    <div class="hud-hint">P = Pause</div>
+
+    <div class="touch-controls" id="touchControls">
+      <button class="touch-btn" id="btnLeft">◀</button>
+      <button class="touch-btn" id="btnJump">▲</button>
+      <button class="touch-btn" id="btnRight">▶</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
