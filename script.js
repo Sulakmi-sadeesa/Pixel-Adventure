@@ -772,7 +772,6 @@
     }
   }
 
-  let lastTime = 0;
   function loop(t) {
     requestAnimationFrame(loop);
     update();
