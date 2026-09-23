@@ -41,12 +41,13 @@ canvas {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(10, 10, 26, 0.9);
+  background: rgba(10, 10, 26, 0.92);
   color: #fff;
   text-align: center;
   padding: 20px;
   z-index: 10;
   transition: opacity 0.3s ease;
+  overflow-y: auto;
 }
 
 .overlay.hidden {
@@ -73,8 +74,15 @@ canvas {
   font-size: clamp(0.9rem, 1.8vw, 1.1rem);
   color: #a8b4d8;
   line-height: 1.8;
-  max-width: 520px;
+  max-width: 560px;
   margin-bottom: 24px;
+}
+
+.overlay p.small {
+  font-size: 0.85rem;
+  color: #667799;
+  margin-top: 16px;
+  margin-bottom: 0;
 }
 
 .overlay .key {
@@ -87,6 +95,27 @@ canvas {
   margin: 0 4px;
   color: #ffd166;
   font-weight: bold;
+}
+
+.level-picker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: #a8b4d8;
+}
+
+.level-picker select {
+  background: #2a2a4a;
+  color: #ffd166;
+  border: 2px solid #4a4a7a;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .btn {
@@ -113,6 +142,18 @@ canvas {
 .btn:active {
   transform: translateY(2px);
   border-bottom-width: 2px;
+}
+
+.btn.alt {
+  background: #a8b4d8;
+  border-bottom-color: #4a4a7a;
+}
+
+.btn-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hud-hint {
