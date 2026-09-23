@@ -45,16 +45,6 @@ No build step. No dependencies. No install.
 
 ---
 
-## 📁 Project Structure
-
-├── index.html # Markup & UI overlays
-├── style.css # Styling, responsive layout, touch controls
-├── script.js # Game engine, physics, rendering, levels
-└── README.md
-
-
----
-
 ## 🛠 Tech Stack
 
 | Technology | Purpose |
