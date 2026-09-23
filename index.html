@@ -10,58 +10,63 @@
   <div id="gameWrap">
     <canvas id="game" width="960" height="540"></canvas>
 
-    <!-- START SCREEN -->
     <div class="overlay" id="startScreen">
       <h1>🎮 PIXEL ADVENTURE</h1>
       <p>
-        Guide your hero through <b>30 levels</b> of pixel peril!<br />
-        Collect coins, stomp slimes, dodge spikes, reach the flag.<br /><br />
         Move: <span class="key">←</span> <span class="key">→</span> &nbsp;
         Jump: <span class="key">SPACE</span> / <span class="key">↑</span><br />
         Pause: <span class="key">P</span> &nbsp; Reset: <span class="key">R</span><br />
         Mobile: on-screen buttons
       </p>
-      <div class="level-picker">
-        <label for="levelSelect">Start at level:</label>
-        <select id="levelSelect"></select>
-      </div>
-      <button class="btn" id="startBtn">Start Game</button>
+      <button class="btn" id="playBtn" type="button">Play</button>
       <p class="small" id="bestScore">Best score: 0</p>
     </div>
 
-    <!-- WIN LEVEL SCREEN -->
+    <div class="overlay hidden" id="levelScreen">
+      <h1>🗺️ SELECT LEVEL</h1>
+      <p>Beat a level to unlock the next one.</p>
+      <div class="level-grid" id="levelGrid"></div>
+      <div class="btn-row">
+        <button class="btn alt" id="backBtn" type="button">← Back</button>
+        <button class="btn alt" id="resetProgressBtn" type="button">Reset Progress</button>
+      </div>
+    </div>
+
     <div class="overlay hidden" id="winScreen">
       <h1>🎉 LEVEL CLEAR!</h1>
       <h2 id="winScore">Score: 0</h2>
       <p id="winInfo">Nice work — on to the next one!</p>
-      <button class="btn" id="nextLevelBtn">Next Level →</button>
+      <div class="btn-row">
+        <button class="btn" id="nextLevelBtn" type="button">Next Level →</button>
+        <button class="btn alt" id="winMenuBtn" type="button">Level Select</button>
+      </div>
     </div>
 
-    <!-- GAME OVER SCREEN -->
     <div class="overlay hidden" id="loseScreen">
       <h1>💀 GAME OVER</h1>
       <h2 id="loseScore">Score: 0</h2>
       <p id="loseInfo">Don't give up — try again!</p>
       <div class="btn-row">
-        <button class="btn" id="retryBtn">Retry</button>
-        <button class="btn alt" id="menuBtn">Menu</button>
+        <button class="btn" id="retryBtn" type="button">Retry</button>
+        <button class="btn alt" id="loseMenuBtn" type="button">Level Select</button>
       </div>
     </div>
 
-    <!-- FINAL VICTORY SCREEN -->
     <div class="overlay hidden" id="finalScreen">
       <h1>🏆 YOU WIN!</h1>
       <h2 id="finalScore">Final Score: 0</h2>
-      <p>You conquered all 30 levels of Pixel Adventure.<br />You are a true pixel hero! 🌟</p>
-      <button class="btn" id="playAgainBtn">Play Again</button>
+      <div class="btn-row">
+        <button class="btn" id="playAgainBtn" type="button">Play Again</button>
+        <button class="btn alt" id="finalMenuBtn" type="button">Level Select</button>
+      </div>
     </div>
 
     <div class="hud-hint">P = Pause &nbsp;·&nbsp; R = Restart Level</div>
 
     <div class="touch-controls" id="touchControls">
-      <button class="touch-btn" id="btnLeft">◀</button>
-      <button class="touch-btn" id="btnJump">▲</button>
-      <button class="touch-btn" id="btnRight">▶</button>
+      <button class="touch-btn" id="btnLeft" type="button">◀</button>
+      <button class="touch-btn" id="btnJump" type="button">▲</button>
+      <button class="touch-btn" id="btnRight" type="button">▶</button>
     </div>
   </div>
 
