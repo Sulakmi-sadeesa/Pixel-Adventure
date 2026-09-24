@@ -41,8 +41,6 @@ A cute pixel-art 2D platformer built with HTML Canvas and vanilla JavaScript. Co
 3. Click **Start Game**
 4. Collect coins, dodge spikes, stomp slimes, and reach the red flag 🚩
 
-No build step. No dependencies. No install.
-
 ---
 
 ## 🛠 Tech Stack
@@ -54,15 +52,13 @@ No build step. No dependencies. No install.
 | Web Audio API | Synthesized sound effects |
 | CSS3 | Overlays, HUD, responsive layout |
 
-No libraries. No frameworks. ~800 lines of pure JS.
-
 ---
 
 ## 🧠 How It Works
 
 - **Game loop** runs on `requestAnimationFrame` with fixed-step physics
 - **Entities** (`Player`, `Enemy`) inherit from a base `Entity` class with AABB collision
-- **Physics** include gravity, friction, coyote time, jump buffering — feels great to play
+- **Physics** includes gravity, friction, coyote time, jump buffering 
 - **Camera** smoothly follows the player with parallax scrolling backgrounds
 - **Levels** are data-driven — just arrays of platforms, coins, enemies, spikes, and a goal
 - **Particles** are lightweight objects with life timers for coin/enemy hit effects
